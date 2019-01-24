@@ -1,15 +1,28 @@
-var example1 = "Swirl";
-var letters = example1.split(""); //a
-var shiftLetters = letters.shift(); //b
-letters[letters.length] = shiftLetters;
-console.log(letters);
+//starts with 1 consonant
+function(userInput){
+
+  var example1 = "buy";
+  var letters = example1.split("");   //turns into an array
+  var translation = [];
+  var vowels = ["A", "E", "I", "O", "U", "a", "e", "i", "o", "u"];
 
 
-var translation = [];
+  //starts with a vowel
+  var word = "";
+  var startsWithVowel = false;
 
+  vowels.forEach(function(vowel) {
+    if (vowel === letters[0]) {
+      word = letters.join("") + "way"
+      startsWithVowel = true;
+    }
+  });
 
+// Starts with consonant
+  if(!startsWithVowel){
+    var shiftLetters = letters.shift();
+    shiftLetters.push("ay");
+  }
+  console.log(shiftLetters);
 
-var pigLatin = function(word) {
-  if (word.char[])
-  return pigLatin.push("way");
-});
+}
