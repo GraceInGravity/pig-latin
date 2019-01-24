@@ -21,7 +21,7 @@ function(userInput){
 // Starts with consonant
   if(!startsWithVowel){
     var shiftLetters = letters.shift();
-    shiftLetters.push("ay");
+    shiftLetters.join("").push("ay");
   }
   console.log(shiftLetters);
 
